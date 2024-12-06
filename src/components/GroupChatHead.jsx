@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ChatInvitePopup from "./ChatInvitePopup";
 import PopUpWindow from "./addnewmemb";
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
 
@@ -31,6 +32,11 @@ const GroupChatHead = () => {
   const togglePopUp = () => {
     setIsOpen(!isOpen);
   };
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleClick = () => {
+    navigate("/"); // Navigate to the chat page when the button is clicked
+  };
 
   const handleAddMember = () => {
     if (newMember.trim() !== "") {
@@ -59,7 +65,7 @@ const GroupChatHead = () => {
     <div>
       {/* Main Content */}
       <div
-        className={`flex items-center justify-between p-4 px-20 ${
+        className={`flex items-center justify-between p-4 px-52 mb-16 ${
           isOpen ? "blur-sm" : ""
         }`}
       >
@@ -111,8 +117,11 @@ const GroupChatHead = () => {
           >
             <UserGroupIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
           </button> */}
-          <button className="relative w-12 h-12 bg-white rounded-md">
-            <PlusIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
+          <button className="relative w-11 h-11 bg-white rounded-md">
+            <PlusIcon
+              onClick={handleClick} // Call handleClick function on button click
+              className="absolute w-6 h-6 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2"
+            />
           </button>
         </div>
       </div>

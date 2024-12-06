@@ -21,7 +21,7 @@ code {
     monospace;
 }
 
-.Header {
+/* .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@ code {
 .HeaderLeft {
   display: flex;
   align-items: center;
-}
+} */
 
 .MenuButton {
   margin-right: 15px;

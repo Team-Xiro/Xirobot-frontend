@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import ChatInputBox from "../components/ChatInputBox";
 import { FaPlus, FaBars } from "react-icons/fa";
 import { MdOutlineGroupAdd } from "react-icons/md";
@@ -9,6 +10,8 @@ import profilepic from "../assets/images/profilepic.png";
 import ChatHead from "../components/ChatHead";
 
 function Main() {
+  const navigate = useNavigate(); // Initialize the navigate function
+
   const getGreeting = () => {
     const currentHour = new Date().getHours(); // Get the current hour (0-23)
 
@@ -21,25 +24,15 @@ function Main() {
     }
   };
 
+  // Function to handle click on a chat box
+  const handleChatBoxClick = (chatTitle) => {
+    // You can pass the chatTitle to the chat page or use it for any other purpose
+    console.log(`Navigating to chat for: ${chatTitle}`);
+    navigate("/chat"); // Navigate to the /chat page
+  };
+
   return (
-    <div className="Main" style={{ textAlign: "center", padding: "20px" }}>
-      {/* <header className="Header">
-        <div className="HeaderLeft">
-          <button className="MenuButton">
-            <FaBars />
-          </button>
-          <img className="ProfilePicture" src={profilepic} alt="Profile" />
-          <span className="ProfileName">Nipun Jayasinghe</span>
-        </div>
-        <div className="HeaderRight">
-          <button className="HeaderButton">
-            <MdOutlineGroupAdd size={18} />
-          </button>
-          <button className="HeaderButton">
-            <FiPlus size={18} />
-          </button>
-        </div>
-      </header> */}
+    <div className="Main" style={{ textAlign: "center", padding: "0px" }}>
       <ChatHead />
       <div className="Greeting">
         <div className="GreetingContent">
@@ -53,36 +46,44 @@ function Main() {
       </div>
       <ChatInputBox />
 
-      <div class="previouschats">
-        <div class="crcheader">
+      <div className="previouschats">
+        <div className="crcheader">
           <h1>Continue Recent Chats</h1>
         </div>
-        <div class="chatBoxes">
-          <div class="chatBox">
-            <div class="chatBoxContent">
-              <span class="chatTitle">Best Coding Practices</span>
-              <span class="chatDate">Yesterday</span>
+        <div className="chatBoxes">
+          <div
+            className="chatBox"
+            onClick={() => handleChatBoxClick("Best Coding Practices")}
+          >
+            <div className="chatBoxContent">
+              <span className="chatTitle">Best Coding Practices</span>
+              <span className="chatDate">Yesterday</span>
             </div>
-            <br></br>
-            <button class="chatOptions">
+            <button className="chatOptions">
               <span>...</span>
             </button>
           </div>
-          <div class="chatBox">
-            <div class="chatBoxContent">
-              <span class="chatTitle">Design Patterns in real life</span>
-              <span class="chatDate">01 Dec 2024</span>
+          <div
+            className="chatBox"
+            onClick={() => handleChatBoxClick("Design Patterns in real life")}
+          >
+            <div className="chatBoxContent">
+              <span className="chatTitle">Design Patterns in real life</span>
+              <span className="chatDate">01 Dec 2024</span>
             </div>
-            <button class="chatOptions">
+            <button className="chatOptions">
               <span>...</span>
             </button>
           </div>
-          <div class="chatBox">
-            <div class="chatBoxContent">
-              <span class="chatTitle">Interview preparation help</span>
-              <span class="chatDate">30 Nov 2024</span>
+          <div
+            className="chatBox"
+            onClick={() => handleChatBoxClick("Interview preparation help")}
+          >
+            <div className="chatBoxContent">
+              <span className="chatTitle">Interview preparation help</span>
+              <span className="chatDate">30 Nov 2024</span>
             </div>
-            <button class="chatOptions">
+            <button className="chatOptions">
               <span>...</span>
             </button>
           </div>

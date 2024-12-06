@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { FaPlus, FaBars } from "react-icons/fa";
@@ -29,7 +30,11 @@ const ChatHead = ({ avatar, username }) => {
   const [newMemberImage, setNewMemberImage] = useState(
     "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
   );
+  const navigate = useNavigate(); // Initialize the navigate function
 
+  const handleClick = () => {
+    navigate("/"); // Navigate to the chat page when the button is clicked
+  };
   const togglePopUp = () => {
     setIsOpen(!isOpen);
   };
@@ -56,7 +61,7 @@ const ChatHead = ({ avatar, username }) => {
   };
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
-    <div className="flex items-center justify-between p-4 px-20 ">
+    <div className="flex items-center justify-between p-4 px-52 mb-16">
       <div className="flex items-center gap-4">
         {/* Avatar */}
         <img src={profile1} alt="Avatar" className="w-10 h-10 rounded-md" />
@@ -68,13 +73,16 @@ const ChatHead = ({ avatar, username }) => {
       </div>
       <div className="flex gap-2">
         <button
-          className="relative w-12 h-12 bg-white rounded-md"
+          className="relative w-11 h-11 bg-white rounded-md"
           onClick={() => setIsPopupOpen(true)}
         >
-          <UserGroupIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
+          <UserGroupIcon className="absolute h-6 w-6 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
         </button>
-        <button className="relative w-12 h-12 bg-white rounded-md">
-          <PlusIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
+        <button className="relative w-11 h-11 bg-white rounded-md">
+          <PlusIcon
+            onClick={handleClick} // Call handleClick function on button click
+            className="absolute h-6 w-6 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2"
+          />
         </button>
       </div>
       {isOpen && (
