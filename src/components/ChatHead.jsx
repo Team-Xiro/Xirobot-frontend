@@ -2,16 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { FaPlus, FaBars } from "react-icons/fa";
-import { MdOutlineGroupAdd } from "react-icons/md";
-import { FiPlus } from "react-icons/fi";
-import profilepic from "../assets/images/profilepic.png";
 
 import ChatInvitePopup from "./ChatInvitePopup";
 import nipun from "../image/memb1.jpeg";
 import daryl from "../image/daryl.jpg";
 import donald from "../image/donald.jpg";
-import kim from "../image/kim.jpg";
 import saman from "../image/saman.jpg";
 import sam from "../image/sam.jpg";
 

@@ -1,12 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import ChatInputBox from "../components/ChatInputBox";
-import { FaPlus, FaBars } from "react-icons/fa";
-import { MdOutlineGroupAdd } from "react-icons/md";
-import { FiPlus } from "react-icons/fi";
 
 import logo1 from "../assets/images/logo.png";
-import profilepic from "../assets/images/profilepic.png";
 import ChatHead from "../components/ChatHead";
 
 function Main() {
