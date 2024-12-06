@@ -1,4 +1,7 @@
 import React from "react";
+
+import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
+
 import profile1 from "../assets/profile1.jpg";
 import profile2 from "../assets/profile2.jpg";
 import profile3 from "../assets/profile3.jpg";
@@ -48,10 +51,10 @@ const GroupChatHead = () => {
 
       <div className="flex gap-2">
         <button className="relative w-12 h-12 bg-white rounded-md">
-          
+          <UserGroupIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
         </button>
         <button className="relative w-12 h-12 bg-white rounded-md">
-            
+          <PlusIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
         </button>
       </div>
     </div>
