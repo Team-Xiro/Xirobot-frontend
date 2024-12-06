@@ -11,7 +11,6 @@ const GroupChatHead = () => {
     <div className="flex items-center justify-between p-4 px-20 bg-blue-100">
       <div className="flex items-center gap-4">
         <div className="relative flex items-center">
-
           <div className="absolute z-30 w-10 h-10 translate-x-0 rounded-full">
             <img
               src={profile3}
@@ -38,8 +37,8 @@ const GroupChatHead = () => {
               className="w-full h-full rounded-md"
             />
             <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full bg-black rounded-md opacity-60">
-            <span className="text-lg font-semibold text-white">+2</span>
-          </div>
+              <span className="text-lg font-semibold text-white">+2</span>
+            </div>
           </div>
         </div>
 
