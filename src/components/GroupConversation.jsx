@@ -23,7 +23,7 @@ const messages = [
   {
     position: "right",
     type: "text",
-    text: "I like that idea! How about a project that combines technology and education? Something that helps students learn better.",
+    text: "I like that idea @XiroGPT! How about a project that combines technology and education? Something that helps students learn better.",
     avatar: profile3,
   },
   {

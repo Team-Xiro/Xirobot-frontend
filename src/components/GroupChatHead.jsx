@@ -43,15 +43,15 @@ const GroupChatHead = () => {
 
         {/* Group Name */}
         <span className="ml-24 text-2xl font-bold text-blue-900">
-          Friends Group
+          New Project Brainstorm
         </span>
       </div>
 
       <div className="flex gap-2">
-        <button className="relative bg-white rounded-md h-14 w-14">
+        <button className="relative w-12 h-12 bg-white rounded-md">
           <UserGroupIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
         </button>
-        <button className="relative bg-white rounded-md h-14 w-14">
+        <button className="relative w-12 h-12 bg-white rounded-md">
           <PlusIcon className="absolute w-8 h-8 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
         </button>
       </div>
