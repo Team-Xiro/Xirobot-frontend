@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaPaperclip, FaCamera, FaMicrophone } from "react-icons/fa";
 import { MdSend } from "react-icons/md";
 import { LuAudioLines } from "react-icons/lu";
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
 const ChatInputBox = () => {
   const [message, setMessage] = useState("");
@@ -18,6 +19,11 @@ const ChatInputBox = () => {
       e.preventDefault();
       handleSend();
     }
+  };
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleClick = () => {
+    navigate("/voicechat"); // Navigate to the chat page when the button is clicked
   };
 
   return (
@@ -52,7 +58,7 @@ const ChatInputBox = () => {
             </button>
             <button
               className="text-gray-500 hover:text-gray-700"
-              onClick={() => console.log("Microphone clicked")}
+              onClick={handleClick} // Call handleClick function on button click
             >
               <LuAudioLines size={18} />
             </button>
