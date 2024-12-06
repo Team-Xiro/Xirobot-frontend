@@ -1,10 +1,13 @@
 import './App.css';
-import ChatInputBox from './components/ChatInputBox';
+
+import PopUpWindow from './components/addnewmemb';
+
 
 function App() {
   return (
     <div className="App">
-      <ChatInputBox/>
+      <PopUpWindow/>
+      
     </div>
   );
 }
