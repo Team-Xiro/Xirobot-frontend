@@ -24,7 +24,7 @@ const GroupChatHead = () => {
     { name: "Daryl Mitchelle", image: saman, remove: true },
     { name: "Matt Smith", image: daryl, remove: true },
   ]);
-  const [newMember, setNewMember] = useState("");
+  //const [newMember, setNewMember] = useState("");
   // const [newMemberImage, setNewMemberImage] = useState(
   //   "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
   // );
