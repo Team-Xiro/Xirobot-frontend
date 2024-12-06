@@ -8,7 +8,7 @@ import profile3 from "../assets/profile3.jpg";
 
 const GroupChatHead = () => {
   return (
-    <div className="flex items-center justify-between p-4 px-20 bg-blue-100">
+    <div className="flex items-center justify-between p-4 px-20 ">
       <div className="flex items-center gap-4">
         <div className="relative flex items-center">
           <div className="absolute z-30 w-10 h-10 translate-x-0 rounded-full">

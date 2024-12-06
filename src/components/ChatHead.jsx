@@ -1,12 +1,16 @@
 import React from "react";
 
 import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { FaPlus, FaBars } from "react-icons/fa";
+import { MdOutlineGroupAdd } from "react-icons/md";
+import { FiPlus } from "react-icons/fi";
+import profilepic from "../assets/images/profilepic.png";
 
 import profile1 from "../assets/profile1.jpg";
 
 const ChatHead = ({ avatar, username }) => {
   return (
-    <div className="flex items-center justify-between p-4 px-20 bg-blue-100">
+    <div className="flex items-center justify-between p-4 px-20 ">
       <div className="flex items-center gap-4">
         {/* Avatar */}
         <img src={profile1} alt="Avatar" className="w-10 h-10 rounded-md" />
@@ -25,6 +29,23 @@ const ChatHead = ({ avatar, username }) => {
         </button>
       </div>
     </div>
+    // <header className="Header">
+    //   <div className="HeaderLeft">
+    //     <button className="MenuButton">
+    //       <FaBars />
+    //     </button>
+    //     <img className="ProfilePicture" src={profilepic} alt="Profile" />
+    //     <span className="ProfileName">Nipun Jayasinghe</span>
+    //   </div>
+    //   <div className="HeaderRight">
+    //     <button className="HeaderButton">
+    //       <MdOutlineGroupAdd size={18} />
+    //     </button>
+    //     <button className="HeaderButton">
+    //       <FiPlus size={18} />
+    //     </button>
+    //   </div>
+    // </header>
   );
 };
 

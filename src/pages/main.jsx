@@ -4,6 +4,10 @@ import { FaPlus, FaBars } from "react-icons/fa";
 import { MdOutlineGroupAdd } from "react-icons/md";
 import { FiPlus } from "react-icons/fi";
 
+import logo1 from "../assets/images/logo.png";
+import profilepic from "../assets/images/profilepic.png";
+import ChatHead from "../components/ChatHead";
+
 function Main() {
   const getGreeting = () => {
     const currentHour = new Date().getHours(); // Get the current hour (0-23)
@@ -19,16 +23,12 @@ function Main() {
 
   return (
     <div className="Main" style={{ textAlign: "center", padding: "20px" }}>
-      <header className="Header">
+      {/* <header className="Header">
         <div className="HeaderLeft">
           <button className="MenuButton">
             <FaBars />
           </button>
-          <img
-            className="ProfilePicture"
-            src="../assets/images/profilepic.png"
-            alt="Profile"
-          />
+          <img className="ProfilePicture" src={profilepic} alt="Profile" />
           <span className="ProfileName">Nipun Jayasinghe</span>
         </div>
         <div className="HeaderRight">
@@ -39,14 +39,11 @@ function Main() {
             <FiPlus size={18} />
           </button>
         </div>
-      </header>
+      </header> */}
+      <ChatHead />
       <div className="Greeting">
         <div className="GreetingContent">
-          <img
-            className="XiroGPTLogo"
-            src="../assets/images/logo.png"
-            alt="logo"
-          />
+          <img className="XiroGPTLogo" src={logo1} alt="logo" />
           <h1 className="greetingtext">
             {getGreeting()} Nipun!
             <br />

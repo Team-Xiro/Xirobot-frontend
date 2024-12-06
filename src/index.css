@@ -23,13 +23,12 @@ code {
 
 .Header {
   display: flex;
-  justify-content: space-between; /* Space between left and right sections */
-  align-items: center; /* Align items vertically */
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
-  background-color: transparent; /* Ensures no background color */
-  margin-bottom: 100px;
-  margin-left: 250px;
-  margin-right: 250px;
+  background-color: transparent;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .HeaderLeft {
