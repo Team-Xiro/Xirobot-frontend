@@ -22,9 +22,9 @@ const ChatHead = ({ avatar, username }) => {
     { name: "Matt Smith", image: daryl, remove: true },
   ]);
   const [newMember, setNewMember] = useState("");
-  const [newMemberImage, setNewMemberImage] = useState(
-    "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
-  );
+  // const [newMemberImage, setNewMemberImage] = useState(
+  //   "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
+  // );
   const navigate = useNavigate(); // Initialize the navigate function
 
   const handleClick = () => {
@@ -34,20 +34,20 @@ const ChatHead = ({ avatar, username }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleAddMember = () => {
-    if (newMember.trim() !== "") {
-      setMembers([
-        ...members,
-        {
-          name: newMember.trim(),
-          image:
-            "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
-          remove: true,
-        },
-      ]);
-      setNewMember("");
-    }
-  };
+  // const handleAddMember = () => {
+  //   if (newMember.trim() !== "") {
+  //     setMembers([
+  //       ...members,
+  //       {
+  //         name: newMember.trim(),
+  //         image:
+  //           "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
+  //         remove: true,
+  //       },
+  //     ]);
+  //     setNewMember("");
+  //   }
+  // };
 
   const handleRemoveMember = (index) => {
     const updatedMembers = [...members];

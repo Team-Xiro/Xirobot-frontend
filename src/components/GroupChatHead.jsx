@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ChatInvitePopup from "./ChatInvitePopup";
-import PopUpWindow from "./addnewmemb";
+//import PopUpWindow from "./addnewmemb";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 
-import { UserGroupIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { PlusIcon } from "@heroicons/react/24/outline";
 
 import profile1 from "../assets/profile1.jpg";
 import profile2 from "../assets/profile2.jpg";
@@ -11,7 +11,7 @@ import profile3 from "../assets/profile3.jpg";
 import nipun from "../image/memb1.jpeg";
 import daryl from "../image/daryl.jpg";
 import donald from "../image/donald.jpg";
-import kim from "../image/kim.jpg";
+// import kim from "../image/kim.jpg";
 import saman from "../image/saman.jpg";
 import sam from "../image/sam.jpg";
 
@@ -25,9 +25,9 @@ const GroupChatHead = () => {
     { name: "Matt Smith", image: daryl, remove: true },
   ]);
   const [newMember, setNewMember] = useState("");
-  const [newMemberImage, setNewMemberImage] = useState(
-    "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
-  );
+  // const [newMemberImage, setNewMemberImage] = useState(
+  //   "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
+  // );
 
   const togglePopUp = () => {
     setIsOpen(!isOpen);
@@ -38,20 +38,20 @@ const GroupChatHead = () => {
     navigate("/"); // Navigate to the chat page when the button is clicked
   };
 
-  const handleAddMember = () => {
-    if (newMember.trim() !== "") {
-      setMembers([
-        ...members,
-        {
-          name: newMember.trim(),
-          image:
-            "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
-          remove: true,
-        },
-      ]);
-      setNewMember("");
-    }
-  };
+  // const handleAddMember = () => {
+  //   if (newMember.trim() !== "") {
+  //     setMembers([
+  //       ...members,
+  //       {
+  //         name: newMember.trim(),
+  //         image:
+  //           "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
+  //         remove: true,
+  //       },
+  //     ]);
+  //     setNewMember("");
+  //   }
+  // };
 
   const handleRemoveMember = (index) => {
     const updatedMembers = [...members];

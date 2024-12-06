@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPaperclip, FaCamera, FaMicrophone } from "react-icons/fa";
+import { FaPaperclip, FaCamera } from "react-icons/fa";
 import { MdSend } from "react-icons/md";
 import { LuAudioLines } from "react-icons/lu";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook

@@ -3,7 +3,7 @@ import ChatInvitePopup from "./ChatInvitePopup";
 import nipun from "../image/memb1.jpeg";
 import daryl from "../image/daryl.jpg";
 import donald from "../image/donald.jpg";
-import kim from "../image/kim.jpg";
+// import kim from "../image/kim.jpg";
 import saman from "../image/saman.jpg";
 import sam from "../image/sam.jpg";
 
@@ -16,29 +16,29 @@ const PopUpWindow = () => {
     { name: "Daryl Mitchelle", image: saman, remove: true },
     { name: "Matt Smith", image: daryl, remove: true },
   ]);
-  const [newMember, setNewMember] = useState("");
-  const [newMemberImage, setNewMemberImage] = useState(
-    "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
-  );
+  //   const [newMember, setNewMember] = useState("");
+  //   const [newMemberImage, setNewMemberImage] = useState(
+  //     "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png"
+  //   );
 
   const togglePopUp = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleAddMember = () => {
-    if (newMember.trim() !== "") {
-      setMembers([
-        ...members,
-        {
-          name: newMember.trim(),
-          image:
-            "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
-          remove: true,
-        },
-      ]);
-      setNewMember("");
-    }
-  };
+  //   const handleAddMember = () => {
+  //     if (newMember.trim() !== "") {
+  //       setMembers([
+  //         ...members,
+  //         {
+  //           name: newMember.trim(),
+  //           image:
+  //             "https://www.iconpacks.net/icons/1/free-user-icon-295-thumb.png",
+  //           remove: true,
+  //         },
+  //       ]);
+  //       setNewMember("");
+  //     }
+  //   };
 
   const handleRemoveMember = (index) => {
     const updatedMembers = [...members];

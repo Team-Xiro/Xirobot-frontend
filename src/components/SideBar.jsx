@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
-import {
-  BsChevronRight,
-  BsChevronLeft,
-  BsGear,
-  BsQuestionCircle,
-} from "react-icons/bs";
+import { BsGear, BsQuestionCircle } from "react-icons/bs";
 import { RiGroupLine } from "react-icons/ri"; // Import the icon
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 
