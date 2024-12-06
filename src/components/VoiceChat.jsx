@@ -2,7 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-import { MicrophoneIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const VoiceChat = () => {
   return (
