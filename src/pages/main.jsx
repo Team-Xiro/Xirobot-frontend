@@ -32,7 +32,12 @@ function Main() {
       <ChatHead />
       <div className="Greeting">
         <div className="GreetingContent">
-          <img className="XiroGPTLogo" src={logo1} alt="logo" />
+          <img
+            className="XiroGPTLogo animate-spin duration-[3000ms]"
+            src={logo1}
+            alt="logo"
+          />
+
           <h1 className="greetingtext">
             {getGreeting()} Nipun!
             <br />
