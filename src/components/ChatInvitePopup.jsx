@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { X, Search, Mail, Check, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import sanduni from "../image/sanduni.jpg";
 import daryl from "../image/daryl.jpg";
 import donald from "../image/donald.jpg";
@@ -30,7 +31,7 @@ const InvitedUsersList = ({ users }) => {
         {users.map((user) => (
           <div
             key={user.id}
-            className="flex items-center bg-white border rounded-[12px] pl-2 pr-3 py-1 shadow-sm border border-gray-400 h-14"
+            className="flex items-center bg-white border rounded-[12px] pl-2 pr-3 py-1 shadow-sm border-gray-400 h-14"
           >
             <img
               src={getAvatarUrl(user.id)}
@@ -72,7 +73,7 @@ const InvitationSuccessPopup = ({ isOpen, onClose }) => {
           </p>
         </div>
         <button
-          onClick={onClose}
+          onClick={onClose} // Trigger onClose which now also handles redirect
           className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
         >
           Close
@@ -84,6 +85,7 @@ const InvitationSuccessPopup = ({ isOpen, onClose }) => {
 
 // Main ChatInvitePopup Component
 const ChatInvitePopup = ({ isOpen, onClose }) => {
+  const navigate = useNavigate(); // Initialize navigate function
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [invitedUsers, setInvitedUsers] = useState([]);
@@ -133,6 +135,7 @@ const ChatInvitePopup = ({ isOpen, onClose }) => {
 
   const handleSuccessClose = () => {
     setIsSuccessPopupVisible(false);
+    navigate("/groupchat"); // Redirect to the group chat page after closing
   };
 
   if (!isOpen) return null;
@@ -226,20 +229,20 @@ const ChatInvitePopup = ({ isOpen, onClose }) => {
           <div className="flex justify-end gap-3 mt-4 sm:mt-6">
             <button
               onClick={onClose}
-              className="px-4 py-2 sm:px-5 sm:py-2.5 text-gray-600 hover:bg-gray-100 rounded-lg"
+              className="px-4 py-2 sm:px-5 sm:py-2 bg-white text-gray-600 rounded-lg hover:bg-gray-100"
             >
-              Cancel
+              Close
             </button>
             <button
               onClick={handleSendInvites}
-              className="px-4 py-2 sm:px-5 sm:py-2.5 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50"
-              disabled={selectedUsers.length === 0}
+              className="px-6 py-2 sm:px-8 sm:py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
             >
-              Send invite(s)
+              Send Invites
             </button>
           </div>
         </div>
       </div>
+
       <InvitationSuccessPopup
         isOpen={isSuccessPopupVisible}
         onClose={handleSuccessClose}
